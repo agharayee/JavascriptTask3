@@ -8,33 +8,54 @@ let CheckDivisible = function(divisibleNumber){
                     _arrdata.push(i);
             }
 
+
+
             if (i % 2 == 0){
-                divisibleNumber.push("yu");
+                _arrdata.push("yu");
                 if(i % 5 == 0){
-                    divisibleNumber[divisibleNumber.length - 1] = "yo-oh"
+                    _arrdata[_arrdata.length - 1] = "yu-oh";
                 }
-                if (i % 3 == 0){
-                    divisibleNumber[divisibleNumber.length - 1] = "yu-gi";
-                    if(i % 5 == 0 ){
-                        divisibleNumber[divisibleNumber.length - 1] ="yu-gi-oh"
+                if(i % 3 == 0){
+                    _arrdata[_arrdata.length -1] = "yu-gi";
+                    if (i % 5 == 0){
+                        _arrdata[_arrdata.length -1] = "yu-gi-oh";
                     }
                 }
             }
+
+
 
             if (i % 2 == 0 && i % 3 == 0){
-                    if (i % 3 == 0){
-                        divisibleNumber.push("gi");
-                        if (i % 5 == 0){
-                            divisibleNumber[divisibleNumber.length - 1] = "gi-oh";
-                        
-                    }
+            }else{
+                if (i % 3 == 0){
+                    _arrdata.push("gi");
+                if (i % 5 == 0){
+                    _arrdata[_arrdata.length - 1] = "go-oh";
+                }
+            
+            }
+        }
+
+
+
+        if (i % 2 == 0 && i % 5 == 0){
+        }else{
+            if (i % 3 == 0 && i % 5 == 0){
+            }else{
+                if(i % 5 == 0){
+                    _arrdata.push("oh");
                 }
             }
+         }
+       }
 
-            if (i % 2 == 0 && i % 5 == 0){
-                
-            }
-
-        }
-    }
+       return _arrdata;
+     }
+     
 }
+
+
+
+CheckDivisible(100);
+
+CheckDivisible(26);
